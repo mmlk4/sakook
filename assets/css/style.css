@@ -1,0 +1,148 @@
+:root {
+  --color: #DDD;
+  --bgc: #333;
+  --a: #333;
+  --hc: #FFF;
+  --hbgc: #333;
+  --round: 50%;
+}
+
+::-moz-selection {
+  background-color: var(--hbgc);
+  color: var(--hc);
+}
+
+::selection {
+  background-color: var(--hbgc);
+  color: var(--hc);
+}
+
+html {
+  font: 75%/1 Lato, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--color);
+  background: url("انتظرونا.png") no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+h1, h2, h3, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  display: inherit;
+  list-style: none;
+}
+
+a, a:visited, a:active, a:link, a:hover {
+  text-decoration: none;
+  color: var(--a);
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+
+.grid {
+  display: grid;
+  grid-column: 2/4;
+  grid-template-columns: 1fr repeat(2, minmax(auto, 25rem)) 1fr;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: [xl-start] 1fr 1.5rem [md-start] minmax(0, 624px) [md-end] 1.5rem 1fr [xl-end];
+}
+
+.grid2 * {
+  grid-column: md;
+}
+
+.grid2-xl {
+  grid-column: xl;
+}
+
+.cf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ct {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ol {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("https://images.unsplash.com/reserve/URG2BbWQQ9SAcqLuTOLp_BP7A9947.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=4b303ea3a7149481da183fdfa430068") top/cover no-repeat fixed;
+}
+
+.full {
+  max-height: 100%;
+  height: 100vh;
+  width: 100%;
+}
+
+.al {
+  text-align: left;
+}
+
+.ac {
+  text-align: center;
+}
+
+.aj {
+  text-align: justify;
+}
+
+.container {
+  width: 100%;
+}
+.container h1 {
+  text-transform: uppercase;
+  font-size: 5rem;
+  margin: 1.8rem;
+  letter-spacing: 0.8rem;
+}
+.container h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-style: italic;
+}
+.container .count {
+  margin-top: 3rem;
+}
+.container .count .countd {
+  display: inline-block;
+  width: 6.5rem;
+  height: 6.5rem;
+  border: 2px solid;
+  border-radius: var(--round);
+  margin: 0 2.5rem 2.5rem;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+.container .count .countd span {
+  display: block;
+  font-size: 2rem;
+  margin-top: 1.6rem;
+}
+
+@media screen and (max-width: 575px) {
+  .countd {
+    margin: 0 4.6rem 4.6rem !important;
+  }
+}
+@media screen and (max-width: 430px) {
+  .countd {
+    margin: 0 2.5rem 2.5rem !important;
+  }
+}

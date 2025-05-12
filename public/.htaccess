@@ -1,0 +1,17 @@
+
+Options -Indexes
+RewriteEngine On
+RewriteBase /
+
+# إذا الملف أو المجلد موجود، لا تعدّل عليه
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# إعادة توجيه تلقائية لإضافة .php خلف الكواليس
+RewriteRule ^(.+)$ $1.php [L]
+
+ErrorDocument 400 /sakook_modern/public/400.php
+ErrorDocument 401 /sakook_modern/public/401.php
+ErrorDocument 403 /sakook_modern/public/403.php
+ErrorDocument 404 /sakook_modern/public/404.php
+ErrorDocument 500 /sakook_modern/public/500.php
